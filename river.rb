@@ -8,4 +8,11 @@ class River
         @fish_in_river = []
     end
 
+    def fish_count()
+        return @fish_in_river.length()
+    end
+
+    def fish_enter_river(fish)
+        @fish_in_river << fish
+    end
 end
