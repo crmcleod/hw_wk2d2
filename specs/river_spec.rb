@@ -16,4 +16,8 @@ class RiverTest < MiniTest::Test
     def test_can_create_river()
         assert_equal(River, @river.class())
     end
+
+    def test_river_has_name()
+        assert_equal("Water of Leith", @river.river_name())
+    end
 end
