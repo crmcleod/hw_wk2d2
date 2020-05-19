@@ -31,7 +31,7 @@ class RiverTest < MiniTest::Test
 
     def test_river_can_contain_two_fish()
         @river.fish_enter_river(@fish1)
-        @river.fish_enter_river(@fish2)
+
         assert_equal(2, @river.fish_count())
     end
 end
