@@ -16,4 +16,11 @@ class Bear
         @stomach << fish
     end
 
+    def eat_fish_from_river(river)
+        if for fish in river.fish_in_river()
+            eat_fish(fish)
+        end
+        river.fish_in_river.clear()
+    end
+
 end
