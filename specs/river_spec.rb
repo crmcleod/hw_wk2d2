@@ -29,6 +29,17 @@ class RiverTest < MiniTest::Test
         assert_equal(0, @river.fish_count())
     end
 
+    def test_remove_fish_from_river()
+        @bear1 = Bear.new("Wotjek")
+
+        @river.fish_enter_river(@fish1)
+        @river.fish_enter_river(@fish2)
+        @bear1.eat_fish(@fish1)
+        @river.remove_specific_fish_from_river(@fish1)
+        assert_equal(1, @river.fish_count())
+    end
+
+
     def test_river_is_empty_once_fish_are_all_eaten()
         @river.fish_enter_river(@fish1)
         @river.river_empty()
