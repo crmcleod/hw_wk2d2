@@ -15,4 +15,8 @@ class River
     def fish_enter_river(fish)
         @fish_in_river << fish
     end
+
+    def river_empty()
+        @fish_in_river.clear()
+    end
 end

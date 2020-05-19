@@ -46,4 +46,10 @@ class BearTest < MiniTest::Test
         assert_equal(0, @river1.fish_count())
     end
 
+    def test_bear_cant_eat_fish_if_river_empty()
+        @river2 = River.new("Mississippi")
+    end
+
+
+
 end

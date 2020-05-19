@@ -29,6 +29,12 @@ class RiverTest < MiniTest::Test
         assert_equal(0, @river.fish_count())
     end
 
+    def test_river_is_empty_once_fish_are_all_eaten()
+        @river.fish_enter_river(@fish1)
+        @river.river_empty()
+        assert_equal(0, @river.fish_count())
+    end
+
     def test_river_can_contain_two_fish()
         @river.fish_enter_river(@fish1)
         @river.fish_enter_river(@fish2)
